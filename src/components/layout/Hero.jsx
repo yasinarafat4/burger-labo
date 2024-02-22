@@ -1,3 +1,5 @@
+import Image from "next/image";
+import heroImage from "../../../public/burger.png";
 import Right from "../icons/Right";
 
 const Hero = () => {
@@ -26,7 +28,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="hidden lg:block">
-        <img className="w-10/12" src={"https://i.ibb.co/DQkSpc2/burger.png"} />
+        <Image src={heroImage} width={450} />
       </div>
     </section>
   );

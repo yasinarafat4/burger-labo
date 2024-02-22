@@ -13,7 +13,7 @@ const Header = () => {
       </Link>
       <nav className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[4rem] flex w-full flex-col bg-white pb-3 pt-2 transition-all duration-300 lg:p-4 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
+        } top-[4rem] flex w-full flex-col bg-white p-2 transition-all duration-300 lg:p-4 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
         <Link href={" "}>Home</Link>
         <Link href={" "}>Menu</Link>
@@ -26,7 +26,7 @@ const Header = () => {
           Login
         </Link>
       </nav>
-      <label className="swap-rotate swap btn-ghost btn-circle btn ml-2 bg-white lg:hidden">
+      <label className="swap-rotate swap btn-ghost btn-circle btn bg-white lg:hidden">
         <input
           checked={navToggle}
           onChange={() => setNavToggle((pre) => !pre)}
