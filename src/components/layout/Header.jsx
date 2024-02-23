@@ -7,7 +7,7 @@ const Header = () => {
 // States
   const [navToggle, setNavToggle] = useState(false);
   return (
-    <header className="sticky top-0 z-50 flex items-center bg-white justify-between">
+    <header className="sticky top-0 z-40 flex items-center bg-white justify-between">
       <Link className="text-primary font-semibold text-2xl ps-3 py-4" href="">
         BurgerLabo
       </Link>
