@@ -1,4 +1,4 @@
-export default function Right({ className = "w-6 h-6" }) {
+const Right = ({ className = "w-6 h-6" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,6 @@ export default function Right({ className = "w-6 h-6" }) {
       />
     </svg>
   );
-}
+};
+
+export default Right;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import heroImage from "../../../public/burger.png";
 import Right from "../icons/Right";
 
+
 const Hero = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 items-center md:mt-4">
