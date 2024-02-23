@@ -8,12 +8,12 @@ const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
   return (
     <header className="sticky top-0 z-50 flex items-center bg-white justify-between">
-      <Link className="text-primary font-semibold text-2xl" href="">
+      <Link className="text-primary font-semibold text-2xl ps-3 py-4" href="">
         BurgerLabo
       </Link>
       <nav className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[4rem] flex w-full flex-col bg-white p-2 transition-all duration-300 lg:p-4 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
+        } top-[3rem] flex w-full flex-col bg-white p-4 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
         <Link href={" "}>Home</Link>
         <Link href={" "}>Menu</Link>

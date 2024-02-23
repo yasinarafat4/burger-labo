@@ -6,7 +6,7 @@ import Right from "../icons/Right";
 const Hero = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 items-center md:mt-4">
-      <div className="py-8 md:py-12">
+      <div className="px-3 lg:px-0 py-8 md:py-12">
         <h1 className="text-3xl md:text-4xl font-semibold">
           Life is tastier
           <br />
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="hidden lg:block">
-        <Image src={heroImage} width={450} />
+        <Image src={heroImage} width={450} alt={"hero-Image"} />
       </div>
     </section>
   );
