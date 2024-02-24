@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Header = () => {
+  const pathname = usePathname();
   // States
   const [navToggle, setNavToggle] = useState(false);
   return (
@@ -16,10 +18,47 @@ const Header = () => {
           navToggle ? "left-0" : "left-[-120%]"
         } top-[3rem] flex w-full flex-col bg-white p-4 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
-        <Link className="hover:text-primary hover:underline duration-300" href={"/"}>Home</Link>
-        <Link className="hover:text-primary hover:underline duration-300" href={"/menu"}>Menu</Link>
-        <Link className="hover:text-primary hover:underline duration-300" href={"/about"}>About</Link>
-        <Link className="hover:text-primary hover:underline duration-300" href={"/contact"}>Contact</Link>
+        <Link
+          className={`${
+            pathname === "/"
+              ? "text-primary underline"
+              : "hover:text-primary duration-300"
+          }`}
+          href={"/"}
+        >
+          Home
+        </Link>
+        <Link
+          className={`${
+            pathname === "/menu"
+              ? "text-primary underline"
+              : "hover:text-primary duration-300"
+          }`}
+          href={"/menu"}
+        >
+          Menu
+        </Link>
+        <Link
+          className={`${
+            pathname === "/about"
+              ? "text-primary underline"
+              : "hover:text-primary duration-300"
+          }`}
+          href={"/about"}
+        >
+          About
+        </Link>
+        <Link
+          className={`${
+            pathname === "/contact"
+              ? "text-primary underline"
+              : "hover:text-primary duration-300"
+          }`}
+          href={"/contact"}
+        >
+          Contact
+        </Link>
+
         <Link
           className="bg-primary px-8 py-2 text-white rounded-full"
           href={" "}
