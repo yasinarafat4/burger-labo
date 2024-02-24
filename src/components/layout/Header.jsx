@@ -79,13 +79,13 @@ const Header = () => {
           navToggle ? "left-0" : "left-[-120%]"
         } top-[16.5rem] flex w-full bg-white py-6 lg:p-4 transition-all duration-300 lg:static lg:w-[unset] justify-center items-center gap-4 lg:bg-transparent font-semibold text-gray-500`}
       >
-        <Link onClick={() => setNavToggle(false)} href={" "}>
+        <Link onClick={() => setNavToggle(false)} href={"/login"}>
           Login
         </Link>
         <Link
           className="bg-primary text-sm px-6 py-2 text-white rounded-full"
           onClick={() => setNavToggle(false)}
-          href={" "}
+          href={"/register"}
         >
           Register
         </Link>
