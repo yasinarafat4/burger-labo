@@ -9,21 +9,33 @@ const Header = () => {
   // States
   const [navToggle, setNavToggle] = useState(false);
   return (
-    <header className="sticky top-0 z-40 flex items-center bg-white justify-between">
-      <Link className="text-primary font-semibold text-2xl ps-3 py-4" href="">
+    <header className="sticky top-0 z-50 xl:z-40 flex items-center bg-white justify-between">
+      <Link
+        className="text-primary font-semibold text-3xl ps-3 py-4 lg:hidden"
+        onClick={() => setNavToggle(false)}
+        href="/"
+      >
         BurgerLabo
       </Link>
       <nav
         className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[3rem] flex w-full flex-col bg-white p-4 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
+        } top-[3.5rem] flex w-full flex-col bg-white p-4 xl:p-3 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
+        <Link
+          className="text-primary font-semibold text-3xl ps-3 py-4 hidden lg:block"
+          onClick={() => setNavToggle(false)}
+          href="/"
+        >
+          BurgerLabo
+        </Link>
         <Link
           className={`${
             pathname === "/"
-              ? "text-primary underline"
+              ? "text-primary"
               : "hover:text-primary duration-300"
           }`}
+          onClick={() => setNavToggle(false)}
           href={"/"}
         >
           Home
@@ -31,9 +43,10 @@ const Header = () => {
         <Link
           className={`${
             pathname === "/menu"
-              ? "text-primary underline"
+              ? "text-primary"
               : "hover:text-primary duration-300"
           }`}
+          onClick={() => setNavToggle(false)}
           href={"/menu"}
         >
           Menu
@@ -41,9 +54,10 @@ const Header = () => {
         <Link
           className={`${
             pathname === "/about"
-              ? "text-primary underline"
+              ? "text-primary"
               : "hover:text-primary duration-300"
           }`}
+          onClick={() => setNavToggle(false)}
           href={"/about"}
         >
           About
@@ -51,21 +65,32 @@ const Header = () => {
         <Link
           className={`${
             pathname === "/contact"
-              ? "text-primary underline"
+              ? "text-primary"
               : "hover:text-primary duration-300"
           }`}
+          onClick={() => setNavToggle(false)}
           href={"/contact"}
         >
           Contact
         </Link>
-
-        <Link
-          className="bg-primary px-8 py-2 text-white rounded-full"
-          href={" "}
-        >
+      </nav>
+      <nav
+        className={`absolute ${
+          navToggle ? "left-0" : "left-[-120%]"
+        } top-[16.5rem] flex w-full bg-white py-6 lg:p-4 transition-all duration-300 lg:static lg:w-[unset] justify-center items-center gap-4 lg:bg-transparent font-semibold text-gray-500`}
+      >
+        <Link onClick={() => setNavToggle(false)} href={" "}>
           Login
         </Link>
+        <Link
+          className="bg-primary text-sm px-6 py-2 text-white rounded-full"
+          onClick={() => setNavToggle(false)}
+          href={" "}
+        >
+          Register
+        </Link>
       </nav>
+
       <label className="swap-rotate swap btn-ghost btn-circle btn bg-white lg:hidden">
         <input
           checked={navToggle}
