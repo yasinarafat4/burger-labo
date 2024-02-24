@@ -1,24 +1,25 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
 
 const Header = () => {
-// States
+  // States
   const [navToggle, setNavToggle] = useState(false);
   return (
     <header className="sticky top-0 z-40 flex items-center bg-white justify-between">
       <Link className="text-primary font-semibold text-2xl ps-3 py-4" href="">
         BurgerLabo
       </Link>
-      <nav className={`absolute ${
+      <nav
+        className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
         } top-[3rem] flex w-full flex-col bg-white p-4 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
-        <Link href={" "}>Home</Link>
-        <Link href={" "}>Menu</Link>
-        <Link href={" "}>About</Link>
-        <Link href={" "}>Contact</Link>
+        <Link className="hover:text-primary hover:underline duration-300" href={"/"}>Home</Link>
+        <Link className="hover:text-primary hover:underline duration-300" href={"/menu"}>Menu</Link>
+        <Link className="hover:text-primary hover:underline duration-300" href={"/about"}>About</Link>
+        <Link className="hover:text-primary hover:underline duration-300" href={"/contact"}>Contact</Link>
         <Link
           className="bg-primary px-8 py-2 text-white rounded-full"
           href={" "}
