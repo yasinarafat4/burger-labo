@@ -37,11 +37,6 @@ const RegisterPage = () => {
       {userCreated && (
         <div className="my-4 text-center text-green-600">
           User created successfully.
-          <br />
-          Now you can{" "}
-          <Link className="underline" href={"/login"}>
-            Login &raquo;
-          </Link>
         </div>
       )}
       {error && (
@@ -86,6 +81,9 @@ const RegisterPage = () => {
           />
           Register with google
         </button>
+        <div className="text-center mt-2">
+          Already have an account? <Link className="text-primary font-semibold" href={"/login"}>Login</Link>
+        </div>
       </form>
     </section>
   );

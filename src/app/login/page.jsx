@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import googleImage from "../../../public/google.png";
 
 const LoginPage = () => {
@@ -45,6 +46,9 @@ const LoginPage = () => {
           />
           Login with google
         </button>
+        <div className="text-center mt-2">
+          Don't have an account? <Link className="text-primary font-semibold" href={"/register"}>Register</Link>
+        </div>
       </form>
     </section>
   );
