@@ -1,5 +1,5 @@
+import { User } from "@/app/models/User";
 import mongoose from "mongoose";
-import { User } from "../../../app/models/User";
 
 export const POST = async (req) => {
   const body = await req.json();
