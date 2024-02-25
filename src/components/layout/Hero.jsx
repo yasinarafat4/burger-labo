@@ -13,7 +13,7 @@ const Hero = () => {
           with a delicious
           <span className="text-primary"> Burger</span>
         </h1>
-        <p className="my-6 w-4/5 text-gray-500 text-sm">
+        <p className="my-6 w-4/5 text-gray-500 dark:text-slate-400 text-sm">
           Burger is the essential ingredient that completes every day, infusing
           life with simple yet satisfying joy.
         </p>
@@ -22,7 +22,7 @@ const Hero = () => {
             Order now
             <Right />
           </button>
-          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 font-semibold">
+          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 dark:text-slate-400 font-semibold">
             Learn more
             <Right />
           </button>
