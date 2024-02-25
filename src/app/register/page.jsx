@@ -36,7 +36,7 @@ const RegisterPage = () => {
       </h1>
       {userCreated && (
         <div className="my-4 text-center text-green-600">
-          User created successfully.
+          User created successfully!
         </div>
       )}
       {error && (
