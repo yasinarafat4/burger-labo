@@ -1,9 +1,11 @@
 "use client";
 
 import useTheme from "@/hooks/useTheme";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import userAvatar from "/public/user-avatar.png";
 
 const Header = () => {
   const pathname = usePathname();
@@ -116,7 +118,51 @@ const Header = () => {
         >
           Register
         </Link>
+        {/* User Profile */}
+        <div className="dropdown-end dropdown">
+          <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
+            <div className="w-9 rounded-full">
+              <Image
+                alt="user-logo"
+                title="Yasin Arafat"
+                // title={displayName}
+                src={
+                  // photoURL ||
+                  userAvatar
+                }
+                className="rounded-full"
+              />
+            </div>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
+          >
+            <li className="mb-2 mt-1 text-center font-semibold">
+              {/* {displayName} */} Yasin Arafat
+            </li>
+            <div className="divider my-0"></div>
+            <li className="mb-2">
+              <Link
+                href="/profile"
+                className="text-lg"
+                activeClassName="text-blue-500"
+              >
+                Profile
+              </Link>
+            </li>
+            <li className="">
+              <button
+                // onClick={handleLogout}
+                className="btn-warning btn content-center text-white"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
+
       {/* Nav Menu for Mobile And Tablet */}
       <label className="swap-rotate swap btn-ghost btn-circle btn btn-sm mr-3 bg-white text-black lg:hidden">
         <input
