@@ -1,27 +1,42 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import googleImage from "../../../public/google.png";
 const RegisterPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    fetch("/api/register", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+  };
+
   return (
     <section className="mt-8 bg-white shadow-lg shadow-black/25 px-6 py-4 md:pb-16 mx-4 md:mx-36 lg:mx-60 xl:mx-80 rounded-md">
       <h1 className="text-2xl lg:text-3xl text-center text-primary p-2 mb-8">
         Register
       </h1>
-      <form className="max-w-xs mx-auto">
+      <form className="max-w-xs mx-auto" onSubmit={handleFormSubmit}>
         <input
           type="email"
           name="email"
           placeholder="Your Email"
-          //   value={email}
+          value={email}
           //    disabled={loginInProgress}
-          //    onChange={ev => setEmail(ev.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           name="password"
           placeholder="Your Password"
-          //   value={password}
+          value={password}
           //    disabled={loginInProgress}
-          //    onChange={ev => setPassword(ev.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button
           // disabled={loginInProgress}
