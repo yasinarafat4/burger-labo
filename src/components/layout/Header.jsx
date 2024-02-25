@@ -1,5 +1,6 @@
 "use client";
 
+import useAuth from "@/hooks/useAuth";
 import useTheme from "@/hooks/useTheme";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +9,9 @@ import { useState } from "react";
 import userAvatar from "/public/user-avatar.png";
 
 const Header = () => {
+  const { user } = useAuth();
+  const { uid, displayName, photoURL } = user || {};
+
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
   // States
@@ -107,60 +111,59 @@ const Header = () => {
             </svg>
           </label>
         </>
-        {/* Dark & Light Mood Ends */}
-        <Link onClick={() => setNavToggle(false)} href={"/login"}>
-          Login
-        </Link>
-        <Link
-          className="bg-primary text-sm px-6 py-2 text-white rounded-full"
-          onClick={() => setNavToggle(false)}
-          href={"/register"}
-        >
-          Register
-        </Link>
-        {/* User Profile */}
-        <div className="dropdown-end dropdown">
-          <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
-            <div className="w-9 rounded-full">
-              <Image
-                alt="user-logo"
-                title="Yasin Arafat"
-                // title={displayName}
-                src={
-                  // photoURL ||
-                  userAvatar
-                }
-                className="rounded-full"
-              />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
-          >
-            <li className="mb-2 mt-1 text-center font-semibold">
-              {/* {displayName} */} Yasin Arafat
-            </li>
-            <div className="divider my-0"></div>
-            <li className="mb-2">
-              <Link
-                href="/profile"
-                className="text-lg"
-                activeClassName="text-blue-500"
-              >
-                Profile
-              </Link>
-            </li>
-            <li className="">
-              <button
-                // onClick={handleLogout}
-                className="btn-warning btn content-center text-white"
-              >
-                Logout
-              </button>
-            </li>
-          </ul>
-        </div>
+        {uid ? (
+          <div className="dropdown-end dropdown">
+            <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
+              <div className="w-9 rounded-full">
+                <Image
+                  alt="user-logo"
+                  title={displayName}
+                  src={photoURL || userAvatar}
+                  className="border rounded-full"
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
+            >
+              <li className="mb-2 mt-1 text-center font-semibold">
+                {displayName || "No user"}
+              </li>
+              <div className="divider my-0"></div>
+              <li className="mb-2">
+                <Link
+                  href="/profile"
+                  className="text-lg"
+                  activeClassName="text-blue-500"
+                >
+                  Profile
+                </Link>
+              </li>
+              <li className="">
+                <button
+                  // onClick={handleLogout}
+                  className="btn-warning btn content-center text-white"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <>
+            <Link onClick={() => setNavToggle(false)} href={"/login"}>
+              Login
+            </Link>
+            <Link
+              className="bg-primary text-sm px-6 py-2 text-white rounded-full"
+              onClick={() => setNavToggle(false)}
+              href={"/register"}
+            >
+              Register
+            </Link>
+          </>
+        )}
       </nav>
 
       {/* Nav Menu for Mobile And Tablet */}
