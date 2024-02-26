@@ -2,6 +2,8 @@
 import GoogleLogin from "@/components/social-login/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { startTransition } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -12,19 +14,26 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { signIn } = useAuth();
 
   // login functionality
+  const { signIn } = useAuth();
+  const search = useSearchParams();
+  const from = search.get("redirectUrl") || "/";
+  const { replace, refresh } = useRouter();
+
   const onSubmit = async (data) => {
     const { email, password } = data;
     const toastId = toast.loading("Loading...");
     try {
-      await signIn(email, password);
-      toast.dismiss(toastId);
-      toast.success("User signed in successfully");
+      startTransition(() => {
+        refresh();
+        replace(from);
+        toast.dismiss(toastId);
+        toast.success("User signed in successfully!");
+      });
     } catch (error) {
       toast.dismiss(toastId);
-      toast.error(error.message || "Sign in failed");
+      toast.error(error.message || "Sign in failed!");
     }
   };
 
@@ -34,6 +43,7 @@ const LoginPage = () => {
         Login
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="max-w-xs mx-auto">
+        {/* Email */}
         <input
           type="email"
           name="email"
@@ -50,6 +60,7 @@ const LoginPage = () => {
             Please enter a valid email address.
           </span>
         )}
+        {/* Password */}
         <input
           type="password"
           name="password"
@@ -66,7 +77,7 @@ const LoginPage = () => {
         <button type="submit">Login</button>
         <div className="divider text-gray-500">OR</div>
         {/* Google login */}
-        <GoogleLogin />
+        <GoogleLogin from={from} />
         <div className="text-center mt-2 dark:text-slate-300">
           Don't have an account?{" "}
           <Link className="text-primary font-semibold" href={"/register"}>
