@@ -1,9 +1,10 @@
 "use client";
+
 import GoogleLogin from "@/components/social-login/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { startTransition } from "react";
+import { Suspense, startTransition } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -38,6 +39,7 @@ const LoginPage = () => {
   };
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <section className="mt-8 bg-white dark:bg-slate-700 shadow-lg shadow-black/25 px-6 py-4 md:pb-16 mx-4 md:mx-36 lg:mx-60 xl:mx-80 rounded-md">
       <h1 className="text-2xl lg:text-3xl text-center text-primary p-2 mb-8">
         Login
@@ -86,6 +88,7 @@ const LoginPage = () => {
         </div>
       </form>
     </section>
+    </Suspense>
   );
 };
 
