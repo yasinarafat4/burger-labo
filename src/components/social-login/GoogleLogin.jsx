@@ -9,13 +9,12 @@ const GoogleLogin = () => {
   const { googleLogin } = useAuth();
   const { replace, refresh } = useRouter();
 
-  const handleGoogleLogin = async ({ from }) => {
+  const handleGoogleLogin = async () => {
     const toastId = toast.loading("Loading...");
     try {
       const { user } = await googleLogin();
       startTransition(() => {
         refresh();
-        replace(from);
         toast.dismiss(toastId);
         toast.success("User signed in successfully!");
       });

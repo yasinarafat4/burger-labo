@@ -3,8 +3,8 @@
 import GoogleLogin from "@/components/social-login/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense, startTransition } from "react";
+import { useRouter } from "next/navigation";
+import { startTransition } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -18,8 +18,6 @@ const LoginPage = () => {
 
   // login functionality
   const { signIn } = useAuth();
-  const search = useSearchParams();
-  const from = search.get("redirectUrl") || "/";
   const { replace, refresh } = useRouter();
 
   const onSubmit = async (data) => {
@@ -28,7 +26,6 @@ const LoginPage = () => {
     try {
       startTransition(() => {
         refresh();
-        replace(from);
         toast.dismiss(toastId);
         toast.success("User signed in successfully!");
       });
@@ -39,7 +36,6 @@ const LoginPage = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
     <section className="mt-8 bg-white dark:bg-slate-700 shadow-lg shadow-black/25 px-6 py-4 md:pb-16 mx-4 md:mx-36 lg:mx-60 xl:mx-80 rounded-md">
       <h1 className="text-2xl lg:text-3xl text-center text-primary p-2 mb-8">
         Login
@@ -79,7 +75,7 @@ const LoginPage = () => {
         <button type="submit">Login</button>
         <div className="divider text-gray-500">OR</div>
         {/* Google login */}
-        <GoogleLogin from={from} />
+        <GoogleLogin />
         <div className="text-center mt-2 dark:text-slate-300">
           Don&apos;t have an account?{" "}
           <Link className="text-primary font-semibold" href={"/register"}>
@@ -88,7 +84,6 @@ const LoginPage = () => {
         </div>
       </form>
     </section>
-    </Suspense>
   );
 };
 
