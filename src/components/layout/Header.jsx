@@ -6,16 +6,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import userAvatar from "/public/user-avatar.png";
 
 const Header = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const { uid, displayName, photoURL } = user || {};
 
+  // Hooks
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
   // States
   const [navToggle, setNavToggle] = useState(false);
+
+  // Logout functionality
+  const handleLogout = async () => {
+    await logout();
+    toast.success("Logout Successfully!");
+  };
+
   return (
     <header className="sticky top-0 z-50 xl:z-40 flex items-center bg-white justify-between dark:bg-slate-800">
       <Link
@@ -111,45 +120,46 @@ const Header = () => {
             </svg>
           </label>
         </>
+        <div className="dropdown-end dropdown">
+          <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
+            <div className="w-9 rounded-full">
+              <Image
+                alt="user-logo"
+                title={displayName}
+                src={photoURL || userAvatar}
+                className="border rounded-full"
+              />
+            </div>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
+          >
+            <li className="mb-2 mt-1 text-center font-semibold">
+              {displayName || "No user"}
+            </li>
+            <div className="divider my-0"></div>
+            <li className="mb-2">
+              <Link
+                href="/profile"
+                className="text-lg"
+                activeClassName="text-blue-500"
+              >
+                Profile
+              </Link>
+            </li>
+            <li className="">
+              <button
+                onClick={handleLogout}
+                className="btn btn-info bg-primary content-center text-white"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
         {uid ? (
-          <div className="dropdown-end dropdown">
-            <label tabIndex={0} className="btn-ghost btn-circle avatar btn">
-              <div className="w-9 rounded-full">
-                <Image
-                  alt="user-logo"
-                  title={displayName}
-                  src={photoURL || userAvatar}
-                  className="border rounded-full"
-                />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
-            >
-              <li className="mb-2 mt-1 text-center font-semibold">
-                {displayName || "No user"}
-              </li>
-              <div className="divider my-0"></div>
-              <li className="mb-2">
-                <Link
-                  href="/profile"
-                  className="text-lg"
-                  activeClassName="text-blue-500"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li className="">
-                <button
-                  // onClick={handleLogout}
-                  className="btn-warning btn content-center text-white"
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </div>
+          <></>
         ) : (
           <>
             <Link onClick={() => setNavToggle(false)} href={"/login"}>

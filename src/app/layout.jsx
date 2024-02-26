@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Toaster from "@/components/toast/Toaster";
 import { Roboto } from "next/font/google";
 import AuthProvider from "../../src/providers/AuthProvider";
 import ThemeProvider from "../../src/providers/ThemeProvider";
@@ -31,6 +32,7 @@ const RootLayout = ({ children }) => {
             </main>
           </AuthProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
