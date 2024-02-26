@@ -79,7 +79,7 @@ const LoginPage = () => {
         {/* Google login */}
         <GoogleLogin from={from} />
         <div className="text-center mt-2 dark:text-slate-300">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link className="text-primary font-semibold" href={"/register"}>
             Register
           </Link>
