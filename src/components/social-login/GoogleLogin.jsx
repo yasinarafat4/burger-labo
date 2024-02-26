@@ -12,7 +12,7 @@ const GoogleLogin = () => {
   const handleGoogleLogin = async () => {
     const toastId = toast.loading("Loading...");
     try {
-      const { user } = await googleLogin();
+      const user = await googleLogin();
       startTransition(() => {
         refresh();
         toast.dismiss(toastId);
