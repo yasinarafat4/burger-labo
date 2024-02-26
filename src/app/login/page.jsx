@@ -24,6 +24,7 @@ const LoginPage = () => {
     const { email, password } = data;
     const toastId = toast.loading("Loading...");
     try {
+      await signIn(email, password);
       startTransition(() => {
         refresh();
         toast.dismiss(toastId);

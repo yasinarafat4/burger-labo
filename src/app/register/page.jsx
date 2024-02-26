@@ -46,7 +46,7 @@ const RegisterPage = () => {
 
   // Register functionality
   const { createUser, profileUpdate } = useAuth();
-  const { replace, refresh } = useRouter();
+  const { refresh } = useRouter();
 
   const onSubmit = async (data, event) => {
     const { name, email, password, photo } = data;
