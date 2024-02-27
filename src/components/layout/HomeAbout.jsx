@@ -42,7 +42,7 @@ const HomeAbout = () => {
           </p>
           <Link href={"/about"}>
             <button className="btn btn-outline text-base hover:bg-primary w-3/6 md:w-2/6 lg:w-2/5 flex items-center justify-center">
-              <span>More About Us</span> <BsArrowUpRight className="text-primary hover:text-white text-base font-bold" />
+              <span>More About Us</span> <BsArrowUpRight className="text-base font-bold" />
             </button>
           </Link>
         </div>

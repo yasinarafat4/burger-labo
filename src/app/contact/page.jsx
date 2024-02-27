@@ -1,16 +1,16 @@
 const ContactPage = () => {
   return (
-    <div className="bg-orange-600 px-2 py-3 lg:px-8 dark:bg-slate-900 dark:text-white">
+    <div className="bg-slate-200 px-2 py-3 lg:px-8 dark:bg-slate-700 dark:text-white">
       <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 justify-center items-center">
         {/*  Text Container*/}
         <div className="lg:col-span-2 xl:col-span-3 mx-3 md:mx-20 lg:mx-5 space-y-3">
-          <p className="text-xl md:text-2xl xl:text-3xl text-white font-semibold">
+          <p className="text-xl md:text-2xl xl:text-3xl text-slate-800 dark:text-white font-semibold">
             Contact Us
           </p>
-          <p className="font-bold text-3xl md:text-5xl text-white">
+          <p className="font-bold text-3xl md:text-5xl text-slate-600 dark:text-white">
             Let&apos;s Connect <br /> and Discuss Your <br /> Culinary Dreams!
           </p>
-          <p className="text-[13px] md:text-xl lg:text-base xl:text-2xl text-white">
+          <p className="text-[13px] md:text-xl lg:text-base xl:text-xl  text-slate-600 dark:text-white">
             Got a craving? Share your ideas! We&apos;re here to <br /> craft
             delectable dishes tailored just for you.
           </p>
