@@ -19,7 +19,7 @@ const SingleCategoryCard = ({ category }) => {
       <div className="card-body flex-grow-0">
         <div className="flex justify-between items-center">
           <h2 className="text-sm md:text-base font-bold">{name}</h2>
-          <Link title="View All from this Category" href={`/products?categoryId=${_id}`}>
+          <Link title="View All from this Category" href={`/burgers?categoryId=${_id}`}>
             <FaEye className="text-lg"/>
           </Link>
         </div>
