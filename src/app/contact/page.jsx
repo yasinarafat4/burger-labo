@@ -11,7 +11,7 @@ const ContactPage = () => {
             Let&apos;s Connect <br /> and Discuss Your <br /> Culinary Dreams!
           </p>
           <p className="text-[13px] md:text-xl lg:text-base xl:text-2xl text-white">
-            Got a craving? Share your ideas! We're here to <br /> craft
+            Got a craving? Share your ideas! We&apos;re here to <br /> craft
             delectable dishes tailored just for you.
           </p>
         </div>
