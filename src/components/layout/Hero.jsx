@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import heroImage from "../../../public/burger.png";
 import Right from "../icons/Right";
-
 
 const Hero = () => {
   return (
@@ -18,14 +18,20 @@ const Hero = () => {
           life with simple yet satisfying joy.
         </p>
         <div className="flex gap-1 md:gap-4 text-sm">
-          <button className="flex justify-center bg-primary uppercase items-center gap-2 text-white px-2 py-1 md:px-4 md:py-2 rounded-full">
-            Order now
-            <Right />
-          </button>
-          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 dark:text-slate-400 font-semibold">
-            Learn more
-            <Right />
-          </button>
+          <Link href={"/menu"}>
+            {" "}
+            <button className="flex justify-center bg-primary uppercase items-center gap-2 text-white px-2 py-1 md:px-4 md:py-2 rounded-full">
+              Order now
+              <Right />
+            </button>
+          </Link>
+          <Link href={"/about"}>
+            {" "}
+            <button className="flex items-center border-0 gap-2 py-2 text-gray-600 dark:text-slate-400 font-semibold">
+              Learn more
+              <Right />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="hidden lg:block">
