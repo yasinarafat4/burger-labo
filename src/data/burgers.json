@@ -1,0 +1,234 @@
+[
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50ec" },
+    "title": "Traditional Beef Burger",
+    "categoryId": "616e68012f58f213a6745b1b",
+    "imageUrl": "https://i.ibb.co/bmRCVsx/Traditional-Beef-Burger.jpg",
+    "price": { "$numberDouble": "69.99" },
+    "ratings": { "$numberDouble": "4.5" },
+    "ingredients": [
+      "Beef patty",
+      "lettuce",
+      "tomato",
+      "onion",
+      "pickles",
+      "ketchup",
+      "mustard",
+      "sesame seed bun"
+    ],
+    "details": "A timeless favorite featuring juicy beef patty topped with fresh veggies and classic condiments."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50ed" },
+    "title": "Cheeseburger Deluxe",
+    "categoryId": "616e68012f58f213a6745b1b",
+    "imageUrl": "https://i.ibb.co/VBgrFDP/Cheeseburger-Deluxe.jpg",
+    "price": { "$numberDouble": "149.99" },
+    "ratings": { "$numberDouble": "4.7" },
+    "ingredients": [
+      "Beef patty",
+      "American cheese",
+      "lettuce",
+      "tomato",
+      "onion",
+      "pickles",
+      "mayo",
+      "ketchup",
+      "sesame seed bun"
+    ],
+    "details": "Indulge in this classic with melted cheese on top of a perfectly seasoned beef patty, served with fresh veggies."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50ee" },
+    "title": "Bacon BBQ Burger",
+    "categoryId": "616e68012f58f213a6745b1b",
+    "imageUrl": "https://i.ibb.co/mcY17Hk/Bacon-BBQ-Burger.jpg",
+    "price": { "$numberInt": "699" },
+    "ratings": { "$numberDouble": "4.9" },
+    "ingredients": [
+      "Beef patty",
+      "bacon",
+      "cheddar cheese",
+      "lettuce",
+      "tomato",
+      "onion",
+      "BBQ sauce",
+      "brioche bun"
+    ],
+    "details": "Savor the smoky flavor of bacon combined with tangy BBQ sauce atop a juicy beef patty, a true delight."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50ef" },
+    "title": "Mini BBQ Chicken Sliders",
+    "categoryId": "616e68012f58f213a6745b1c",
+    "imageUrl": "https://i.ibb.co/vZv0363/Mini-BBQ-Chicken-Sliders.jpg",
+    "price": { "$numberInt": "499" },
+    "ratings": { "$numberDouble": "4.8" },
+    "ingredients": [
+      "Grilled chicken patty",
+      "BBQ sauce",
+      "coleslaw",
+      "slider buns"
+    ],
+    "details": "Irresistible mini chicken sliders with smoky BBQ sauce and crunchy coleslaw, perfect for sharing."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f1" },
+    "title": "Truffle Mushroom Burger",
+    "categoryId": "616e68012f58f213a6745b1d",
+    "imageUrl": "https://i.ibb.co/kghvWLf/Truffle-Mushroom-Burger.jpg",
+    "price": { "$numberDouble": "12.99" },
+    "ratings": { "$numberDouble": "4.7" },
+    "ingredients": [
+      "Beef patty",
+      "sautéed mushrooms",
+      "Swiss cheese",
+      "arugula",
+      "truffle mayo",
+      "brioche bun"
+    ],
+    "details": "Elevate your taste buds with this gourmet burger featuring earthy mushrooms and luxurious truffle mayo."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f0" },
+    "title": "Blue Cheese & Caramelized Onion Burger",
+    "categoryId": "616e68012f58f213a6745b1d",
+    "imageUrl": "https://i.ibb.co/V31F9DS/Blue-Cheese-Caramelized-Onion-Burger.jpg",
+    "price": { "$numberDouble": "9.99" },
+    "ratings": { "$numberDouble": "4.5" },
+    "ingredients": [
+      "Beef patty",
+      "blue cheese",
+      "caramelized onions",
+      "lettuce",
+      "tomato",
+      "balsamic glaze",
+      "ciabatta bun"
+    ],
+    "details": "Experience the perfect harmony of savory blue cheese and sweet caramelized onions in every bite."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f3" },
+    "title": "Black Bean Quinoa Burger",
+    "categoryId": "616e68012f58f213a6745b1e",
+    "imageUrl": "https://i.ibb.co/myy4WpM/Black-Bean-Quinoa-Burger.jpg",
+
+    "price": { "$numberDouble": "79.99" },
+    "ratings": { "$numberDouble": "4.6" },
+    "ingredients": [
+      "Black beans",
+      "quinoa",
+      "bell peppers",
+      "onions",
+      "spices",
+      "avocado",
+      "lettuce",
+      "tomato",
+      "whole grain bun"
+    ],
+    "details": "A hearty and nutritious burger made with black beans and quinoa, topped with creamy avocado slices."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f4" },
+    "title": "Portobello Mushroom Burger",
+    "categoryId": "616e68012f58f213a6745b1e",
+    "imageUrl": "https://i.ibb.co/9Ncd3rK/Portobello-Mushroom-Burger.jpg",
+    "price": { "$numberDouble": "29.99" },
+    "ratings": { "$numberDouble": "4.7" },
+    "ingredients": [
+      "Portobello mushrooms",
+      "balsamic glaze",
+      "roasted red peppers",
+      "spinach",
+      "vegan mayo",
+      "whole wheat bun"
+    ],
+    "details": "Enjoy the meaty texture of portobello mushrooms paired with tangy balsamic glaze and roasted peppers."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f5" },
+    "title": "Beyond Burger Deluxe",
+    "categoryId": "616e68012f58f213a6745b1e",
+    "imageUrl": "https://i.ibb.co/rvL8FkT/Beyond-Burger-Deluxe.jpg",
+    "price": { "$numberDouble": "19.99" },
+    "ratings": { "$numberDouble": "4.4" },
+    "ingredients": [
+      "Beyond Burger patty",
+      "vegan cheese",
+      "caramelized onions",
+      "lettuce",
+      "tomato",
+      "vegan mayo",
+      "sesame seed bun"
+    ],
+    "details": "A plant-based delight featuring a Beyond Burger patty with all the classic fixings, guilt-free indulgence."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50e9" },
+    "title": "Tex-Mex Burger",
+    "categoryId": "616e68012f58f213a6745b1a",
+    "imageUrl": "https://i.ibb.co/XXRKXd9/Tex-Mex-Burger.jpg",
+    "price": { "$numberInt": "1099" },
+    "ratings": { "$numberDouble": "4.8" },
+    "ingredients": [
+      "Beef patty",
+      "pepper jack cheese",
+      "jalapeños",
+      "guacamole",
+      "lettuce",
+      "tomato",
+      "chipotle mayo",
+      "brioche bun"
+    ],
+    "details": "Spice up your day with this Tex-Mex twist featuring jalapeños, creamy guacamole, and zesty chipotle mayo."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50ea" },
+    "title": "Mediterranean Lamb Burger",
+    "categoryId": "616e68012f58f213a6745b1a",
+    "imageUrl": "https://i.ibb.co/mqzkzPZ/Mediterranean-Lamb-Burger.jpg",
+    "price": { "$numberInt": "999" },
+    "ratings": { "$numberDouble": "4.7" },
+    "ingredients": [
+      "Lamb patty",
+      "feta cheese",
+      "tzatziki sauce",
+      "lettuce",
+      "tomato",
+      "red onion",
+      "ciabatta bun"
+    ],
+    "details": "Transport your taste buds to the Mediterranean with this lamb burger topped with tangy feta and cool tzatziki."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50eb" },
+    "title": "Pulled Pork Sliders",
+    "categoryId": "616e68012f58f213a6745b1c",
+    "imageUrl": "https://i.ibb.co/zn06sLw/Pulled-Pork-Sliders.jpg",
+    "price": { "$numberInt": "2499" },
+    "ratings": { "$numberDouble": "4.9" },
+    "ingredients": [
+      "Slow-cooked pulled pork",
+      "BBQ sauce",
+      "pickles",
+      "slider buns"
+    ],
+    "details": "Tender pulled pork sliders smothered in tangy BBQ sauce and topped with crisp pickles, a flavor explosion."
+  },
+  {
+    "_id": { "$oid": "6464c6f1a2bd407882de50f2" },
+    "title": "Slider Burger",
+    "categoryId": "616e68012f58f213a6745b1c",
+    "imageUrl": "https://i.ibb.co/9tJkYCG/Slider-Burger.jpg",
+    "price": { "$numberDouble": "14.99" },
+    "ratings": { "$numberDouble": "4.3" },
+    "ingredients": [
+      "Falafel patties",
+      "tahini sauce",
+      "lettuce",
+      "tomato",
+      "mini pita bread"
+    ],
+    "details": "Delicious falafel sliders drizzled with creamy tahini sauce, a vegetarian twist on a classic favorite."
+  }
+]

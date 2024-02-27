@@ -1,0 +1,27 @@
+[
+  {
+    "_id": { "$oid": "616e68012f58f213a6745b1b" },
+    "name": "Classic Beef Burgers",
+    "imageUrl": "https://i.ibb.co/sHBzZB9/Classic-Beef-Burgers.png"
+  },
+  {
+    "_id": { "$oid": "616e68012f58f213a6745b1d" },
+    "name": "Gourmet Burgers",
+    "imageUrl": "https://i.ibb.co/DQQr2rk/Gourmet-Burgers.png"
+  },
+  {
+    "_id": { "$oid": "616e68012f58f213a6745b1e" },
+    "name": "Vegan Burgers",
+    "imageUrl": "https://i.ibb.co/CPL3Y4N/Vegan-Burgers.png"
+  },
+  {
+    "_id": { "$oid": "616e68012f58f213a6745b1a" },
+    "name": "Regional Burgers",
+    "imageUrl": "https://i.ibb.co/tYF5Jfs/Regional-Burgers.png"
+  },
+  {
+    "_id": { "$oid": "616e68012f58f213a6745b1c" },
+    "name": "Slider Burgers",
+    "imageUrl": "https://i.ibb.co/mbqKj2s/Slider-Burgers.png"
+  }
+]
