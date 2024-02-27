@@ -6,6 +6,7 @@ export const revalidate = 0;
 
 const MenuPage = async ({ searchParams: { categoryId } }) => {
     const burgers = await getBurgers(categoryId);
+    console.log(burgers);
 
   return (
     <div className="mt-10">

@@ -11,7 +11,7 @@ const BurgerDetails = async ({ params: { id } }) => {
   burger;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 m-2">
       <figure>
         <Image
           src={imageUrl}
@@ -24,7 +24,7 @@ const BurgerDetails = async ({ params: { id } }) => {
           sizes="33vw"
         />
       </figure>
-      <div className="col-span-2">
+      <div className="col-span-2 ms-10 lg:ms-2">
         <h2 className="card-title text-3xl">{title}</h2>
         <h3 className="text-xl"><span className="font-semibold">Price: </span>${price}</h3>
         <h3 className="text-xl mt-2">Ingredients</h3>
@@ -37,12 +37,14 @@ const BurgerDetails = async ({ params: { id } }) => {
         </ul>
         <h3 className="text-xl mt-2">Details</h3>
         <p>{details}</p>
+        <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex gap-1 mt-3">
           {[...Array(Math.round(ratings)).keys()].map((i) => (
             <AiOutlineStar key={i} className="text-2xl text-orange-500" />
           ))}
         </div>
-        <AddToCartBtn id={id} />
+        <AddToCartBtn />
+        </div>
       </div>
     </div>
   );

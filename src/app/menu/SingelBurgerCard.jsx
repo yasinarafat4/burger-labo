@@ -3,9 +3,10 @@ import Link from "next/link";
 
 const SingelBurgerCard = ({ burger }) => {
   const { imageUrl, title, price, _id } = burger;
+  
 
   return (
-    <Link href={`/burgers/${_id}`}>
+    <Link href={`/menu/${_id}`}>
       <div className="card h-80 card-compact bg-base-100 shadow-2xl justify-between">
         <figure>
           <Image

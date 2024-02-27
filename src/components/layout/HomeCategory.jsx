@@ -8,6 +8,7 @@ import SectionTitle from "../titles/SectionTitle";
 
 const HomeCategory = async () => {
   const categories = await getCategories();
+  console.log(categories);
 
   return (
     <section className="mt-20 lg:mt-14">
@@ -28,7 +29,7 @@ const HomeCategory = async () => {
       </div>
       {/* Salad Image */}
       <div className="absolute left-0 right-0 w-full justify-start">
-        <div className="absolute -top-[100px] right-0 -z-10 xl:z-50">
+        <div className="absolute -top-[100px] right-0 -z-10">
           <Image src={saladImage2} width={107} height={195} alt={"sallad"} />
         </div>
       </div>
