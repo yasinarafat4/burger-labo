@@ -37,7 +37,7 @@ const HomeAbout = () => {
             We strive to minimize our environmental footprint by sourcing
             ingredients responsibly, reducing waste, and implementing
             eco-friendly packaging solutions. Enjoy your burger guilt-free,
-            knowing that it's not only delicious but also contributing to a
+            knowing that it&apos;s not only delicious but also contributing to a
             healthier planet.
           </p>
           <Link href={"/about"}>
