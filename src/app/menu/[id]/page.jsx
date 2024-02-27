@@ -29,7 +29,7 @@ const BurgerDetails = async ({ params: { id } }) => {
         <h3 className="text-xl"><span className="font-semibold">Price: </span>${price}</h3>
         <h3 className="text-xl mt-2">Ingredients</h3>
         <ul>
-          {ingredients.map((ingredient, i) => (
+          {ingredients?.map((ingredient, i) => (
             <ul key={i}>
               {i + 1}. {ingredient}
             </ul>
@@ -39,7 +39,7 @@ const BurgerDetails = async ({ params: { id } }) => {
         <p>{details}</p>
         <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex gap-1 mt-3">
-          {[...Array(Math.round(ratings)).keys()].map((i) => (
+          {[...Array(Math.round(ratings)).keys()]?.map((i) => (
             <AiOutlineStar key={i} className="text-2xl text-orange-500" />
           ))}
         </div>

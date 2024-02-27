@@ -13,7 +13,7 @@ const MenuPage = async ({ searchParams: { categoryId } }) => {
          {/* Title */}
       <PageTitle heading={"All Burgers"} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-        {burgers.map((burger) => (
+        {burgers?.map((burger) => (
           <SingelBurgerCard burger={burger} key={burger._id} />
         ))}
       </div>

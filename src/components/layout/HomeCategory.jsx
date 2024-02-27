@@ -23,7 +23,7 @@ const HomeCategory = async () => {
       {/* Menu Items Card */}
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mx-2 mb-5">
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <SingleCategoryCard category={category} key={category._id} />
         ))}
       </div>
