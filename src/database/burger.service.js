@@ -6,7 +6,7 @@ import DbConnect from "./DbConnect";
 
 export const getBurgersFromDb = async (categoryId) => {
   const db = await DbConnect();
-  const burgersCollection = db.collection("burgers");
+  const burgersCollection = db?.collection("burgers");
   const query = {};
   if (categoryId) {
     query.categoryId = categoryId;
@@ -16,7 +16,7 @@ export const getBurgersFromDb = async (categoryId) => {
 
 export const getBurgerByIdFromDb = async (id) => {
   const db = await DbConnect();
-  const burgersCollection = db.collection("burgers");
+  const burgersCollection = db?.collection("burgers");
   const query = {
     _id: new ObjectId(id),
   };
@@ -25,7 +25,7 @@ export const getBurgerByIdFromDb = async (id) => {
 
 export const getBurgersByIdsFromDb = async (ids = []) => {
   const db = await DbConnect();
-  const burgersCollection = db.collection("burgers");
+  const burgersCollection = db?.collection("burgers");
   const idsWithObjectId = ids.map((id) => new ObjectId(id));
   const query = {
     _id: { $in: idsWithObjectId },
