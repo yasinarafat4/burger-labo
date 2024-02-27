@@ -18,7 +18,7 @@ const LoginPage = () => {
 
   // login functionality
   const { signIn } = useAuth();
-  const { replace, refresh } = useRouter();
+  const { refresh, replace } = useRouter();
 
   const onSubmit = async (data) => {
     const { email, password } = data;
@@ -29,6 +29,7 @@ const LoginPage = () => {
         refresh();
         toast.dismiss(toastId);
         toast.success("User signed in successfully!");
+        replace("/");
       });
     } catch (error) {
       toast.dismiss(toastId);

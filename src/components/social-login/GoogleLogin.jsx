@@ -17,6 +17,7 @@ const GoogleLogin = () => {
         refresh();
         toast.dismiss(toastId);
         toast.success("User signed in successfully!");
+        replace("/")
       });
     } catch (error) {
       toast.dismiss(toastId);

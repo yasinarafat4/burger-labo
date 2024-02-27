@@ -46,7 +46,7 @@ const RegisterPage = () => {
 
   // Register functionality
   const { createUser, profileUpdate } = useAuth();
-  const { refresh } = useRouter();
+  const { replace, refresh } = useRouter();
 
   const onSubmit = async (data, event) => {
     const { name, email, password, photo } = data;
@@ -61,6 +61,7 @@ const RegisterPage = () => {
         refresh();
         toast.dismiss(toastId);
         toast.success("User signed in successfully!");
+        replace("/");
       });
     } catch (error) {
       toast.dismiss(toastId);

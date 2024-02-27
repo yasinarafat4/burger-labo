@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import homeContact from "../../../public/home-contact.jpg";
 import SectionTitle from "../titles/SectionTitle";
 
@@ -31,7 +31,7 @@ const HomeContact = () => {
           <Link href={"/about"}>
             <button className="btn btn-outline text-base hover:bg-primary w-3/6 md:w-2/6 lg:w-2/5 flex items-center justify-center">
               <span>Contact Us</span>{" "}
-              <FaPhoneAlt className="text-base font-bold" />
+              <FaPhone className="text-base font-bold" />
             </button>
           </Link>
         </div>
