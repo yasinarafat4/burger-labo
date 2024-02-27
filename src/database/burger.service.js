@@ -11,7 +11,7 @@ export const getBurgersFromDb = async (categoryId) => {
   if (categoryId) {
     query.categoryId = categoryId;
   }
-  return burgersCollection.find(query).toArray();
+  return burgersCollection?.find(query).toArray();
 };
 
 export const getBurgerByIdFromDb = async (id) => {
@@ -20,15 +20,15 @@ export const getBurgerByIdFromDb = async (id) => {
   const query = {
     _id: new ObjectId(id),
   };
-  return burgersCollection.findOne(query);
+  return burgersCollection?.findOne(query);
 };
 
 export const getBurgersByIdsFromDb = async (ids = []) => {
   const db = await DbConnect();
   const burgersCollection = db?.collection("burgers");
-  const idsWithObjectId = ids.map((id) => new ObjectId(id));
+  const idsWithObjectId = ids?.map((id) => new ObjectId(id));
   const query = {
     _id: { $in: idsWithObjectId },
   };
-  return burgersCollection.find(query).toArray();
+  return burgersCollection?.find(query).toArray();
 };
