@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 xl:z-40 flex items-center bg-white justify-between dark:bg-slate-800">
+    <header className="sticky top-0 z-50 xl:z-40 flex items-center bg-slate-100  justify-between dark:bg-slate-800">
       <Link
         className="text-primary font-semibold text-3xl ps-3 py-4 lg:hidden"
         onClick={() => setNavToggle(false)}
@@ -38,7 +38,7 @@ const Header = () => {
       <nav
         className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[3.5rem] flex w-full flex-col bg-white dark:bg-slate-800 dark:text-slate-300 p-4 xl:p-3 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
+        } top-[3.5rem] flex w-full flex-col bg-slate-100 dark:bg-slate-800 dark:text-slate-300 p-4 xl:p-3 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row items-center gap-8 lg:bg-transparent font-semibold text-gray-500`}
       >
         <Link
           className="text-primary font-semibold text-3xl ps-3 py-4 hidden lg:block"
@@ -95,7 +95,7 @@ const Header = () => {
       <nav
         className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[16.5rem] flex w-full bg-white dark:bg-slate-800 dark:text-slate-300 py-6 lg:p-4 transition-all duration-300 lg:static lg:w-[unset] justify-center items-center gap-4 lg:bg-transparent font-semibold text-gray-500`}
+        } top-[16.5rem] flex w-full bg-slate-100  dark:bg-slate-800 dark:text-slate-300 py-6 lg:p-4 transition-all duration-300 lg:static lg:w-[unset] justify-center items-center gap-4 lg:bg-transparent font-semibold text-gray-500`}
       >
         {/* Dark & Light Mood Starts */}
         <>

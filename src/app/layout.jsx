@@ -25,7 +25,7 @@ const RootLayout = ({ children }) => {
       <body className={roboto.className}>
         <ThemeProvider>
           <AuthProvider>
-            <main className="lg:max-w-6xl mx-auto lg:p-4">
+            <main className="lg:max-w-7xl mx-auto lg:px-4">
               <Header />
               <div className="min-h-[calc(100vh-257px)]">{children}</div>
               <Footer />
